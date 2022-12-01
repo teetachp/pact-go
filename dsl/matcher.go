@@ -337,6 +337,8 @@ func match(srcType reflect.Type, params params) Matcher {
 			return Like(params.number.float)
 		}
 		return Like(1.1)
+	case reflect.Map:
+		return nil
 	default:
 		panic(fmt.Sprintf("match: unhandled type: %v", srcType))
 	}
