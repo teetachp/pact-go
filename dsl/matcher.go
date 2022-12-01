@@ -309,6 +309,10 @@ func match(srcType reflect.Type, params params) Matcher {
 			if fieldName == "" {
 				continue
 			}
+
+			if field.Type.Kind() == reflect.Map {
+				continue
+			}
 			result[fieldName] = match(field.Type, pluckParams(field.Type, field.Tag.Get("pact")))
 		}
 		return result
@@ -337,8 +341,6 @@ func match(srcType reflect.Type, params params) Matcher {
 			return Like(params.number.float)
 		}
 		return Like(1.1)
-	case reflect.Map:
-		return nil
 	default:
 		panic(fmt.Sprintf("match: unhandled type: %v", srcType))
 	}
