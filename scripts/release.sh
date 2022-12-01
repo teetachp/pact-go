@@ -28,7 +28,7 @@ fi
 # Generate changelog
 step "Generating changelog"
 if [ $? = 0 ]; then
-  log=$(git log --pretty=format:'  * [%h](https://github.com/pact-foundation/pact-go/commit/%h) - %s (%an, %ad)' ${lastVersion}..HEAD | egrep -v "wip(:|\()" | egrep -v "^docs" | egrep -v "^chore" | grep -v Merge | egrep -v "^test")
+  log=$(git log --pretty=format:'  * [%h](https://github.com/teetachp/pact-go/commit/%h) - %s (%an, %ad)' ${lastVersion}..HEAD | egrep -v "wip(:|\()" | egrep -v "^docs" | egrep -v "^chore" | grep -v Merge | egrep -v "^test")
 
   log "Updating CHANGELOG"
   ed CHANGELOG.md << END
@@ -55,7 +55,7 @@ END
 else
   log "ERROR: Version ${version} does not exist, exiting."
   log "To fix this, ensure RELEASE_VERSION in the Wercker build is
-        set to the correct tag (https://app.wercker.com/Pact-Foundation/pact-go/environment)"
+        set to the correct tag (https://app.wercker.com/teetachp/pact-go/environment)"
   exit 1
 fi
 

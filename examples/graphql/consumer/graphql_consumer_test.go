@@ -11,9 +11,9 @@ import (
 	"github.com/graph-gophers/graphql-go/example/starwars"
 	"github.com/graph-gophers/graphql-go/relay"
 	graphql "github.com/hasura/go-graphql-client"
-	"github.com/pact-foundation/pact-go/dsl"
-	g "github.com/pact-foundation/pact-go/dsl/graphql"
 	"github.com/stretchr/testify/assert"
+	"github.com/teetachp/pact-go/dsl"
+	g "github.com/teetachp/pact-go/dsl/graphql"
 )
 
 func TestGraphQLConsumer(t *testing.T) {

@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pact-foundation/pact-go/types"
 	"github.com/stretchr/testify/assert"
+	"github.com/teetachp/pact-go/types"
 )
 
 func init() {

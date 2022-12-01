@@ -1,3 +1,4 @@
+//go:build consumer
 // +build consumer
 
 package provider
@@ -8,8 +9,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pact-foundation/pact-go/dsl"
-	"github.com/pact-foundation/pact-go/examples/messages/types"
+	"github.com/teetachp/pact-go/dsl"
+	"github.com/teetachp/pact-go/examples/messages/types"
 )
 
 var like = dsl.Like

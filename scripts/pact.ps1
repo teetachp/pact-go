@@ -20,11 +20,11 @@ New-Item -Force -ItemType Directory $pactDir
 
 Write-Host "--> Downloading Latest Ruby binaries)"
 $downloadDir = $env:TEMP
-$latestRelease = Invoke-WebRequest https://github.com/pact-foundation/pact-ruby-standalone/releases/latest -Headers @{"Accept"="application/json"}
+$latestRelease = Invoke-WebRequest https://github.com/teetachp/pact-ruby-standalone/releases/latest -Headers @{"Accept"="application/json"}
 $json = $latestRelease.Content | ConvertFrom-Json
 $tag = $json.tag_name
 $latestVersion = $tag.Substring(1)
-$url = "https://github.com/pact-foundation/pact-ruby-standalone/releases/download/$tag/pact-$latestVersion-win32.zip"
+$url = "https://github.com/teetachp/pact-ruby-standalone/releases/download/$tag/pact-$latestVersion-win32.zip"
 
 Write-Host "Downloading $url"
 $zip = "$downloadDir\pact.zip"
@@ -52,7 +52,7 @@ pact-broker version
 
 # Run tests
 Write-Host "--> Running tests"
-$packages = go list github.com/pact-foundation/pact-go/... |  where {$_ -inotmatch 'vendor'} | where {$_ -inotmatch 'examples'}
+$packages = go list github.com/teetachp/pact-go/... |  where {$_ -inotmatch 'vendor'} | where {$_ -inotmatch 'examples'}
 $curDir=$pwd
 
 foreach ($package in $packages) {
@@ -69,14 +69,14 @@ foreach ($package in $packages) {
 Write-Host "--> Testing E2E examples"
 Write-Host "Running consumer tests"
 docker-compose up -d
-go test -tags=consumer -count=1 github.com/pact-foundation/pact-go/examples/... -run TestExample
+go test -tags=consumer -count=1 github.com/teetachp/pact-go/examples/... -run TestExample
 if ($LastExitCode -ne 0) {
   Write-Host "ERROR: Test failed, logging failure"
   $exitCode=1
 }
 
 Write-Host "Running provider tests"
-go test -tags=provider -count=1 github.com/pact-foundation/pact-go/examples/... -run TestExample
+go test -tags=provider -count=1 github.com/teetachp/pact-go/examples/... -run TestExample
 if ($LastExitCode -ne 0) {
   Write-Host "ERROR: Test failed, logging failure"
   $exitCode=1

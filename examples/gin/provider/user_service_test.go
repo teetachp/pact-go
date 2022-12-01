@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pact-foundation/pact-go/dsl"
-	examples "github.com/pact-foundation/pact-go/examples/types"
-	"github.com/pact-foundation/pact-go/types"
-	"github.com/pact-foundation/pact-go/utils"
+	"github.com/teetachp/pact-go/dsl"
+	examples "github.com/teetachp/pact-go/examples/types"
+	"github.com/teetachp/pact-go/types"
+	"github.com/teetachp/pact-go/utils"
 )
 
 // The actual Provider test itself

@@ -3,7 +3,7 @@ package dsl
 import (
 	"os/exec"
 
-	"github.com/pact-foundation/pact-go/client"
+	"github.com/teetachp/pact-go/client"
 )
 
 // ServiceMock is the mock implementation of the Service interface.

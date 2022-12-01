@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/pact-foundation/pact-go/dsl"
+	"github.com/teetachp/pact-go/dsl"
 )
 
 // Variables represents values to be substituted into the query

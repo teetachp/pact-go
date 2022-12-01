@@ -371,7 +371,7 @@
 						ok
 					</text>
 					<text x="8.016" y="1.67" class="f">
-						github.com/pact-foundation/pact-go/examples/consumer/goconsumer
+						github.com/teetachp/pact-go/examples/consumer/goconsumer
 					</text>
 					<text x="72.144" y="1.67" class="f">
 						5.516s
@@ -855,7 +855,7 @@
 						--&gt;
 					</text>
 					<text x="49.098" y="1.67" class="f">
-						github.com/pact-foundation/pact-go/examples/gin/pro
+						github.com/teetachp/pact-go/examples/gin/pro
 					</text>
 				</symbol>
 				<symbol id="51">
@@ -883,7 +883,7 @@
 						--&gt;
 					</text>
 					<text x="49.098" y="1.67" class="f">
-						github.com/pact-foundation/pact-go/examples/gin/pro
+						github.com/teetachp/pact-go/examples/gin/pro
 					</text>
 				</symbol>
 				<symbol id="53">
@@ -3398,7 +3398,7 @@
 						ok
 					</text>
 					<text x="8.016" y="1.67" class="f">
-						github.com/pact-foundation/pact-go/examples/gin/provider
+						github.com/teetachp/pact-go/examples/gin/provider
 					</text>
 					<text x="72.144" y="1.67" class="f">
 						10.225s
